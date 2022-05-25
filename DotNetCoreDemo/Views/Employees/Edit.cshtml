@@ -1,0 +1,28 @@
+﻿@model Employee
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Edit Existing Employee Record</h2>
+
+<form asp-controller="" asp-action="" method="post">
+    <label asp-for="@Model.Id" hidden></label>
+    <table>
+        <tr>
+            <td><label asp-for="@Model.Name"></label></td>
+            <td><input asp-for="@Model.Name" /></td>
+        </tr>
+        <tr>
+            <td><label asp-for="@Model.Email"></label></td>
+            <td><input asp-for="@Model.Email" /></td>
+        </tr>
+        <tr>
+            <td><label asp-for="@Model.Location"></label></td>
+            <td><input asp-for="@Model.Location" /></td>
+        </tr>
+        <tr>
+            <td><input type="submit" value="Update" /></td>
+        </tr>
+
+    </table>
+</form>

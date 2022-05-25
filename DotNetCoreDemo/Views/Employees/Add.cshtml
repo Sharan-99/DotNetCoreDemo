@@ -1,0 +1,26 @@
+﻿@model Employee
+@{
+    ViewData["Title"] = "Add";
+}
+
+<h2>Add Employee Record</h2>
+<form asp-controller="Employees" asp-action="Add" method="post">
+    <table>
+        <tr>
+            <td><label asp-for="Name"></label></td>
+            <td><input asp-for="Name" /></td>
+        </tr>
+        <tr>
+            <td><label asp-for="Email"></label></td>
+            <td><input asp-for="Email" /></td> 
+        </tr>
+        <tr>
+            <td><label asp-for="Location"></label></td>
+            <td><input asp-for="Location" /></td>
+        </tr>
+        <tr>
+            <td colspan="2"><input type="submit" value="Add" /></td>
+        </tr>
+     </table>
+</form>
+

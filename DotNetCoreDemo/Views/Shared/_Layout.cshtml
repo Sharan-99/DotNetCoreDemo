@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <h2>Employee Details</h2>
+    @* @Html.ActionLink("Display Employees List","Index","Employees") |
+        @Html.ActionLink("Add Employee","Add","Employees")  *@
+
+    <a asp-controller="Employees" asp-action="Index">Display Employees List</a> |
+    <a asp-controller="Employees" asp-action="Add">Add</a>
+
+    <div>
+        @RenderBody()
+    </div>
+</body>
+</html>

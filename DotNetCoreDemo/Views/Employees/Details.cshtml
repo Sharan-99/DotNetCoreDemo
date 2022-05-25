@@ -1,0 +1,25 @@
+﻿@model Employee
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details of the Employee</h2>
+<table>
+    <tr>
+        <td>ID:</td>
+        <td>@Model.Id</td>
+    </tr>
+    <tr>
+        <td>Name:</td>
+        <td>@Model.Name</td>
+    </tr>
+    <tr>
+        <td>Email:</td>
+        <td>@Model.Email</td>
+    </tr>
+    <tr>
+        <td>Location:</td>
+        <td>@Model.Location</td>
+    </tr>
+</table>
+<a asp-controller="Employees" asp-action="Index">Back</a>

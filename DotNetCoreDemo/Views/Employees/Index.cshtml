@@ -1,0 +1,42 @@
+﻿@model List<Employee>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Employees List</h2>
+    <div>
+        @if (Model == null)
+        {
+                <h5>No Employee Records to display!</h5>
+        }
+        else
+        {
+
+
+        <table border="1">
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Location</th>
+                <th>Action</th>
+            </tr>
+            @foreach (var i in Model)
+            {
+            <tr>
+                <td>@i.Id</td>
+                <td>@i.Name</td>
+                <td>@i.Email</td>
+                <td>@i.Location</td>
+                <td>
+                    <a asp-controller="Employees" asp-action="Edit" asp-route-id="@i.Id">Edit</a> |
+                    <a asp-controller="Employees" asp-action="Details" asp-route-id="@i.Id">View</a> |
+                    <a asp-controller="Employees" asp-action="Delete" asp-route-id="@i.Id">Delete</a>
+                </td>
+            </tr>
+            }
+        </table>
+        }
+
+    </div>
+
